@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+
+        <div>
+          <v-app-bar
+            color="deep-purple accent-4"
+            dark
+          >
+            <v-toolbar-title>To Do List</v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn
+              color="transparent"
+              elevation="0"
+              @click="close()">Close</v-btn>
+          </v-app-bar>
+        </div>
+
+        <v-container>
+
+          <v-row
+            class="mb-6"
+            no-gutters
+          >
+            <v-col :md="4">
+              <v-card
+                class="pa-2"
+                outlined
+                tile
+              >
+              Total Task: {{ taskList.length}}
+              </v-card>
+            </v-col>
+
+            <v-col :md="4">
+              <v-card
+                class="pa-2"
+                outlined
+                tile
+              >
+              Deleted: {{ taskList.filter(task => task.deletedDate !== '').length }}
+              </v-card>
+            </v-col>
+
+            <v-col :md="4">
+              <v-card
+                class="pa-2"
+                outlined
+                tile>
+              Finished: {{ taskList.filter(task => task.finishedDate !== '').length }}
+              </v-card>
+            </v-col>
+          </v-row>
+        
+
+          <v-text-field
+            label="Type new task here" 
+            v-model="inputTask"
+          >
+          </v-text-field>
+
+          <v-btn block @click="addMe()">Add New Task</v-btn>
+          <br>
+          <v-btn block @click="showAllTask()">Show All</v-btn>
+          <br>
+          <v-simple-table>
+            <template v-slot:default>
+              <thead>
+                <tr>
+                  <th class="text-left"> Index </th>
+                  <th class="text-left"> Task Name </th>
+                  <th class="text-left">  Finished Date </th>
+                  <th class="text-left" v-if="showAll === true"> Deleted Date </th>
+                  <th class="text-left">  Action </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr
+                  v-for="item in taskList"
+                  :key="item.name"
+                  v-if="showAll === true || item.deletedDate === '' "
+                >
+                  <td>{{ taskList.indexOf(item) }}</td>
+                  <td>{{ item.name }}</td>
+                  <td>{{ item.finishedDate }}</td>
+                  <td>{{ item.deletedDate }}</td>
+                  <td>
+                    <v-btn color="error" @click="deleteMe(taskList.indexOf(item))">Delete</v-btn>
+                    <v-btn color="success" @click="finishMe(taskList.indexOf(item))">Finish</v-btn>
+                  </td>
+                </tr>
+              </tbody>
+            </template>
+          </v-simple-table>
+        </v-container>
+
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="js/script.js"></script>
+  
+</body>
+</html>
