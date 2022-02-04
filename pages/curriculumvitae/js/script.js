@@ -21,7 +21,7 @@ new Vue({
             mobileNumber: '+63 926 659 3763',
             emailAddress: 'nelsonviloriadeguzman@gmail.com',
             skypeName: 'live:nelsonviloriadeguzman',
-            github: 'nelsonviloriadeguzman.github.io/activities',
+            github: 'nelsonviloriadeguzman.github.io/exampleprograms/',
             imagePath: 'img/defaultImage.png'
           },
           projectList: [
