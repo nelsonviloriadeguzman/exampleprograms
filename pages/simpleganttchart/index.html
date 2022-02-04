@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gantt Chart</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" defer></script>
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-app-bar color="#607D8B" dark>
+          <v-toolbar-title><h2>Gantt Chart  - (Vue.js + Vuetify)</h2></v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn @click="goBack" color="#607D8B" elevation="0">Close</v-btn>
+        </v-app-bar>
+
+        <v-container>
+          <template>
+
+            <v-simple-table>
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th colspan="11"></th>
+                    <th> <v-btn @click="addNew" class="primary" small><v-icon>mdi-plus</v-icon></v-btn></th>
+                  </tr>
+                  <tr>
+                    <th> Name </th>
+                    <th> Start Date </th>
+                    <th> End Date </th>
+                    <th> <v-btn @click="backDay" class="success" small><v-icon>mdi-chevron-left</v-icon></v-btn> </th>
+                    <th :class="boldText(0)"> {{dayListFormatMonthAndYear(0)}} <br>{{dayListFormat(0)}} </th>
+                    <th :class="boldText(1)"> {{dayListFormatMonthAndYear(1)}} <br>{{dayListFormat(1)}} </th>
+                    <th :class="boldText(2)"> {{dayListFormatMonthAndYear(2)}} <br>{{dayListFormat(2)}} </th>
+                    <th :class="boldText(3)"> {{dayListFormatMonthAndYear(3)}} <br>{{dayListFormat(3)}} </th>
+                    <th :class="boldText(4)"> {{dayListFormatMonthAndYear(4)}} <br>{{dayListFormat(4)}} </th>
+                    <th :class="boldText(5)"> {{dayListFormatMonthAndYear(5)}} <br>{{dayListFormat(5)}} </th>
+                    <th :class="boldText(6)"> {{dayListFormatMonthAndYear(6)}} <br>{{dayListFormat(6)}} </th>
+                    <th> <v-btn @click="nextDay" class="success" small><v-icon>mdi-chevron-right</v-icon></v-btn> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="(item,itemIndex) in itemList"
+                    :key="itemIndex"
+                  >
+                    <td><v-text-field v-model="item.name"></v-text-field></td>
+                    <td>
+                      <v-menu
+                      v-model="startDateMenu[itemIndex]"
+                      :close-on-content-click="false"
+
+                      transition="scale-transition"
+                      offset-y
+                      min-width="290px"
+                      >
+                      <template v-slot:activator="{ on }">
+                      <v-text-field
+                      :value="startDateFormat(item.startDate)"
+                      v-on="on"
+                      readonly
+                      ></v-text-field>
+                      </template>
+                      <v-date-picker v-model="item.startDate" @input="startDateMenu[itemIndex] = false" no-title></v-date-picker>
+                      </v-menu>
+                    </td>
+                    <td>
+                      <v-menu
+                      v-model="endDateMenu[itemIndex]"
+                      :close-on-content-click="false"
+
+                      transition="scale-transition"
+                      offset-y
+                      min-width="290px"
+                      >
+                      <template v-slot:activator="{ on }">
+                      <v-text-field
+                      :value="endDateFormat(item.endDate)"
+                      v-on="on"
+                      readonly
+                      ></v-text-field>
+                      </template>
+                      <v-date-picker v-model="item.endDate" @input="endDateMenu[itemIndex] = false" no-title></v-date-picker>
+                      </v-menu>
+                    </td>
+                    <td></td>
+                    <td :style="highLight(item.startDate,item.endDate,0)"></td>
+                    <td :style="highLight(item.startDate,item.endDate,1)"></td>
+                    <td :style="highLight(item.startDate,item.endDate,2)"></td>
+                    <td :style="highLight(item.startDate,item.endDate,3)"></td>
+                    <td :style="highLight(item.startDate,item.endDate,4)"></td>
+                    <td :style="highLight(item.startDate,item.endDate,5)"></td>
+                    <td :style="highLight(item.startDate,item.endDate,6)"></td>
+                    <td>
+                      <v-btn @click="removeItem(itemIndex)" class="error" small><v-icon>mdi-delete</v-icon></v-btn>
+                    </td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </template>
+          
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+</body>
+</html>

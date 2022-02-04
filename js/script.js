@@ -11,6 +11,18 @@ const data = {
       "cardImage": 'img/curriculumvitae.png',
       "cardLink": 'pages/curriculumvitae/index.html'},
 
+    { "cardTitle": 'Simple Gantt Chart',
+      "cardImage": 'img/simpleganttchart.png',
+      "cardLink": 'pages/simpleganttchart/index.html'},
+
+    { "cardTitle": 'Massage Service Monitoring',
+      "cardImage": 'img/massageservicemonitoring.png',
+      "cardLink": 'pages/massageservicemonitoring/index.html'},
+
+    { "cardTitle": 'Random Questions',
+      "cardImage": 'img/randomquestions.png',
+      "cardLink": 'pages/randomquestions/index.html'},
+
     { "cardTitle": 'Mini Programs',
       "cardImage": 'img/miniprograms.png',
       "cardLink": 'pages/miniprograms/index.html'},
@@ -19,13 +31,10 @@ const data = {
       "cardImage": 'img/crud.png',
       "cardLink": 'pages/crud/index.html'},
 
-    { "cardTitle": 'Random Questions',
-      "cardImage": 'img/randomquestions.png',
-      "cardLink": 'pages/randomquestions/index.html'},
-
     { "cardTitle": 'Home Page Sample 1',
       "cardImage": 'img/homepagesample1.png',
       "cardLink": 'pages/homepagesample1/index.html'}
+      
   ]
 
 }
