@@ -11,7 +11,7 @@ margin-left: -200%;
 }
 
 #radio-slide1:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide1{
-background: #3EC6CC;
+background: #9333ea
 }
 #radio-slide1:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide2,
 #radio-slide1:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide3{
@@ -19,7 +19,7 @@ background: white;
 }
 
 #radio-slide2:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide2{
-background: #3EC6CC;
+background: #9333ea
 }
 
 #radio-slide2:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide1,
@@ -28,7 +28,7 @@ background: white;
 }
 
 #radio-slide3:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide3{
-background: #3EC6CC;
+background: #9333ea
 }
 
 #radio-slide3:checked ~ .outer-radio-div .inner-radio-div .button-slide .radio-slide1,
@@ -57,7 +57,7 @@ width: calc(100% / 3 - 10px);
 }
 
 #radio-testimonial1:checked ~ .button .radio-testimonial1{
-background: #3EC6CC;
+background: #9333ea
 }
 #radio-testimonial1:checked ~ .button .radio-testimonial2,
 #radio-testimonial1:checked ~ .button .radio-testimonial3{
@@ -65,7 +65,7 @@ background: #fff;
 }
 
 #radio-testimonial2:checked ~ .button .radio-testimonial2{
-background: #3EC6CC;
+background: #9333ea
 }
 
 #radio-testimonial2:checked ~ .button .radio-testimonial1,
@@ -74,7 +74,7 @@ background: #fff;
 }
 
 #radio-testimonial3:checked ~ .button .radio-testimonial3{
-background: #3EC6CC;
+background: #9333ea
 }
 
 #radio-testimonial3:checked ~ .button .radio-testimonial1,
