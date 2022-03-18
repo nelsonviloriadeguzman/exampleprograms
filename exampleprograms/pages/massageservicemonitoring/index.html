@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Massage Service Monitoring</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" defer></script>
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+
+        <v-app-bar color="teal" dark>
+            <v-toolbar-title>
+              <h2>Massage Service Monitoring - (Vuejs + Vuetifyjs)</h2>
+            </v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn @click="goBack" elevation="0" color="teal" dark>Close</v-btn>
+        </v-app-bar>
+
+        <v-container>
+          <template>
+            <v-row>
+              <v-col class="text-right"><v-btn @click="addNewEmployee" class="primary" small><v-icon>mdi-plus</v-icon></v-col>
+            </v-row>
+         
+            <v-simple-table>
+              <template v-slot:default>
+                <thead>
+                  <tr>
+                    <th class="text-center" :style="nameHeaderStyle" >Name</th>
+                    <th>Services</v-btn></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    v-for="(employeeInfo,employeeIndex) in employeeList"
+                    :key="employeeIndex"
+                  >
+                    <td class="text-center">
+                      <img :src="employeeList[employeeIndex].imagePath" :style="imageSize"/><br>
+                      {{employeeInfo.name}}
+                    </td>
+                    <td>
+                      <v-row>
+                      <v-col :style="columnStyle">
+                        <v-card :style="cardStyle" v-for="(service,serviceIndex) in employeeInfo.serviceList" :key="serviceIndex">
+                          <v-card-text>
+                            <v-combobox
+                            v-model="service.selectedService"
+                            :items="service.serviceComboBox"
+                            item-text="serviceName"
+                            label="Service"
+                            :style="comboBoxStyle"
+                            ></v-combobox>
+                            Price: ₱{{service.selectedService.price}}<br>
+                            Duration<br>
+                            <v-btn @click="togglePaid(employeeIndex,serviceIndex)" :color="paidStatus(employeeIndex,serviceIndex)" block>{{paidText(employeeIndex,serviceIndex)}}</v-btn>
+                          </v-card-text>
+                        </v-card>
+
+                        <v-card @click="addNewService(employeeIndex)" :style="cardStyle">
+                          <v-card-text :style="cardTextStyle">
+                            <v-icon large>mdi-plus</v-icon></v-btn>
+                          </v-card-text>
+                        </v-card>
+                      </v-col>
+                    </v-row>
+                    </td>
+                  </tr>
+                </tbody>
+              </template>
+            </v-simple-table>
+          </template>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page Sample 1</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-purple-600">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="relative flex items-center justify-between h-16">
+            <div class="flex-1 flex">
+                <div class="ml-5">
+                <div class="flex space-x-4">
+                    <h1><a href="#" class="text-white md:text-3xl font-bold">Home Page Sample 1</a></h1>
+                </div>
+                </div>
+            </div>
+            <div class="absolute inset-y-0 right-0 flex items-center">
+                <ul>
+                    <li><a href="../../index.html" class="text-white">Go Back</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="carousel-container max-w-max w-full overflow-hidden" >
+
+        <input type="radio" name="radio-slide" id="radio-slide1" class="hidden" checked>
+        <input type="radio" name="radio-slide" id="radio-slide2" class="hidden">
+        <input type="radio" name="radio-slide" id="radio-slide3" class="hidden">
+        
+        <div class="carousel-main flex duration-1000"></div>
+        
+        <div class="outer-radio-div flex absolute w-full justify-center -mt-16">
+            <div class="inner-radio-div flex button m-5">
+                <div class="button-slide flex w-full justify-center m-5">
+                    <label for="radio-slide1" class="h-2 w-10 mr-2 rounded cursor-pointer radio-slide1"></label>
+                    <label for="radio-slide2" class="h-2 w-10 mr-2 rounded cursor-pointer radio-slide2"></label>
+                    <label for="radio-slide3" class="h-2 w-10 mr-2 rounded cursor-pointer radio-slide3"></label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="flex items-center justify-center pt-10 flex-col">
+        <h1 class="text-purple-600 font-semibold text-lg">How It Works</h1>
+    </div>
+
+    <div class="how-it-works-container grid sm:grid-cols-1 md:grid-cols-3 gap-4 mb-5 p-5"></div>
+
+    <div class="flex items-center justify-center pt-10 flex-col">
+        <h1 class="text-purple-600 font-semibold text-lg mb-10">Featured Products</h1>
+    </div>
+
+    <div class="featured-products-container grid sm:grid-cols-1 md:grid-cols-3 gap-4 mb-5 p-5"></div>
+
+    <div class="flex items-center justify-center pt-10 flex-col">
+        <h1 class="text-purple-600 font-semibold text-lg mb-10">Categories</h1>
+    </div>
+
+    <div class="categories grid gap-5 mb-5 p-1 sm:grid-cols-2 md:grid-cols-4"></div>
+
+
+</body>
+</html>
