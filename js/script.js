@@ -19,6 +19,10 @@ const data = {
       "cardImage": 'img/massageservicemonitoring.png',
       "cardLink": 'pages/massageservicemonitoring/index.html'},
 
+    { "cardTitle": 'Vue FullStack Installation',
+      "cardImage": 'img/vuefullstackinstallation.png',
+      "cardLink": 'pages/vuefullstackinstallation/index.html'},
+
     { "cardTitle": 'Random Questions',
       "cardImage": 'img/randomquestions.png',
       "cardLink": 'pages/randomquestions/index.html'},

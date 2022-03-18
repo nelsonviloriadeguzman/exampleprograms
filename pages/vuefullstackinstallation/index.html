@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Fullstack Installation</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" defer></script>
+
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+        <v-app-bar color="indigo" dark>
+          <v-toolbar-title><h2>Vue Fullstack Installation - (Vuejs + Vuetifyjs)</h2></v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn @click="goBack" color="indigo" elevation="0">Close</v-btn>
+        </v-app-bar>
+
+        <v-container>
+          
+          <template>
+            <v-card elevation="0">
+              
+              <v-tabs vertical color="indigo">
+
+                <v-tab v-for="video in videoList" :key="video.videoTitle">
+                  {{video.videoCount}}
+                </v-tab>
+             
+                <v-tab-item v-for="video in videoList" :key="video.videoTitle">
+                  <v-card flat>
+                    <v-card-text>
+                      <h1>{{video.videoTitle}}</h1>
+                      <br>
+                      <iframe
+                        :src="video.videoPath"
+                        frameborder="0"
+                        scrolling="no"
+                        width="100%"
+                        height="500rem"
+                        allowfullscreen
+                       >
+                      </iframe>
+                    </v-card-text>
+                  </v-card>
+                </v-tab-item>
+           
+              </v-tabs>
+            </v-card>
+          </template>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+</body>
+</html>
