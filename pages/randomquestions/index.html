@@ -21,7 +21,7 @@
   <div id="app">
     <v-app>
         <v-app-bar color="#a68f59" dark>
-          <v-toolbar-title><h2>Random Questions (Vuejs + Vuetifyjs)</h2></v-toolbar-title>
+          <v-toolbar-title class="text-sm-body-2 text-md-body-1 text-lg-h6">Random Questions (Vuejs + Vuetifyjs)</v-toolbar-title>
           <v-spacer></v-spacer>
           <v-btn @click="close" color="#a68f59" elevation="0">Close</v-btn>
         </v-app-bar>
@@ -36,12 +36,12 @@
                   <v-card-text>
 
                     <v-row>
-                      <v-col class="text-left text-h6 text--primary">Question {{questionCounter}}</v-col>
-                      <v-col class="text-center text-h6 text--primary">Timer: {{ countDown }} </v-col>
-                      <v-col class="text-right text-h6 text--primary">Score: {{score}}</v-col>
+                      <v-col class="text-left font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Question {{questionCounter}}</v-col>
+                      <v-col class="text-center font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Timer: {{ countDown }} </v-col>
+                      <v-col class="text-right font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Score: {{score}}</v-col>
                     </v-row>
                     
-                      <p class="text-center text-h6 text--primary" style="margin-top: 2rem;">
+                      <p class="text-center font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary" style="margin-top: 2rem;">
                         {{ questions[questionCount].question}}
                       </p>
                       <p v-if="questions[questionCount].img != null">
