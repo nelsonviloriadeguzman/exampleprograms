@@ -27,6 +27,10 @@ const data = {
       "cardImage": 'img/randomquestions.png',
       "cardLink": 'pages/randomquestions/index.html'},
 
+    { "cardTitle": 'MuleSoft Fundamentals Quizzes',
+      "cardImage": 'img/mulesoftfundamentalsquizzes.png',
+      "cardLink": 'pages/mulesoftfundamentalsquizzes/index.html'},
+
     { "cardTitle": 'Mini Programs',
       "cardImage": 'img/miniprograms.png',
       "cardLink": 'pages/miniprograms/index.html'},
@@ -38,7 +42,7 @@ const data = {
     { "cardTitle": 'Home Page Sample 1',
       "cardImage": 'img/homepagesample1.png',
       "cardLink": 'pages/homepagesample1/index.html'}
-      
+
   ]
 
 }

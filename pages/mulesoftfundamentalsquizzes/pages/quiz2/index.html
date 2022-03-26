@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz 2</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" defer></script>
+  
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div id="app">
+    <v-app>
+        <v-app-bar color="primary" dark>
+          <v-toolbar-title class="text-sm-body-2 text-md-body-1 text-lg-h6">Quiz 2</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn @click="close" color="primary" elevation="0">Close</v-btn>
+        </v-app-bar>
+
+        <v-container fill-height fluid>
+          <v-row align="center" justify="center">
+              <v-col>
+                <v-card
+                  class="mx-auto full-height ma-10 pa-10"
+                  max-width="650"
+                >
+                  <v-card-text>
+
+                    <v-row>
+                      <v-col class="text-left font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Question {{questionCounter}}</v-col>
+                      <v-col class="text-center font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Timer: {{ countDown }} </v-col>
+                      <v-col class="text-right font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Score: {{score}}</v-col>
+                    </v-row>
+                    
+                      <p class="text-center font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary" style="margin-top: 2rem;">
+                        {{ questions[questionCount].question}}
+                      </p>
+                      <p v-if="questions[questionCount].img != null">
+                        <v-img
+                          :lazy-src="questions[questionCount].img"
+                          max-height="350"
+                          max-width="350"
+                          :src="questions[questionCount].img"
+                        ></v-img>
+                      </p>
+                    <div class="text--primary">
+                      <v-radio-group v-model="answer">
+                        <v-radio
+                          v-for="items in questions[questionCount].answers"
+                          :key="items"
+                          :label="`${items}`"
+                          :value="items">
+                          <template #default ><div v-for="items in questions[questionCount].answers">{{items}}</div></template>
+                        </v-radio>
+                        
+                      </v-radio-group>
+                    </div>
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn
+                      block
+                      color="primary"
+                      dark
+                      @click="submitAnswer(questionCount)"
+                    >
+                      Submit
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+          </v-row>
+        </v-container>
+    </v-app>
+  </div>
+
+</body>
+</html>

@@ -307,7 +307,7 @@ new Vue({
         if (this.questions[questionCount].correct == this.answer){
           this.score++
         } else{
-          alert(`\nWrong! The correct answer is \n\n${ this.toUnicodeVariant(this.questions[questionCount].correct, 'bold', 'bold') }\n`)
+          alert(`\nThe correct answer is \n\n${ this.toUnicodeVariant(this.questions[questionCount].correct, 'bold', 'bold') }\n`)
         }
 
         this.questionCount++
