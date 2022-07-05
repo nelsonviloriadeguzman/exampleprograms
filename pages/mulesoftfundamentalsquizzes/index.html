@@ -32,9 +32,10 @@
                 :key="cards.cardTitle"
                 md="3" 
               >
-               <v-card
+                <v-card
                     class="mx-auto"
                     max-width="344"
+                    @click="open(cards.cardLink)"
                   >
                     <v-img
                     :src=cards.cardImage
@@ -42,17 +43,7 @@
                 
                     ></v-img>
 
-                    <v-card-actions>
-                      <v-btn
-                        color="primary"
-                        text
-                        block
-                        @click="open(cards.cardLink)"
-                      >
-                      {{cards.cardTitle}}
-                      </v-btn>
-                    </v-card-actions>
-                  </v-card>
+                </v-card>
               </v-col>
             </v-row>
           </template>
