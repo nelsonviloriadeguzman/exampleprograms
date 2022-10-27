@@ -7,9 +7,9 @@ const data = {
   },
   results : "",
   cardList : [
-    { "cardTitle": 'Curriculum Vitae',
-      "cardImage": 'img/curriculumvitae.png',
-      "cardLink": 'pages/curriculumvitae/index.html'},
+    { "cardTitle": 'Resume',
+      "cardImage": 'img/resume.png',
+      "cardLink": 'pages/resume/index.html'},
 
     { "cardTitle": 'Simple Gantt Chart',
       "cardImage": 'img/simpleganttchart.png',

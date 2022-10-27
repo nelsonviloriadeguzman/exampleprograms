@@ -6,8 +6,7 @@ new Vue({
     data () {
         return {
           rowHeaderStyle:{
-            backgroundColor:"#1976D2",
-            color: 'white'
+            "border-bottom": "2px solid"
             },
           h2Style:{
               padding:"10px"
@@ -189,9 +188,21 @@ new Vue({
                                                   ${this.shortProfile.github}`}]]
                                     },
                                   
-                                },
+                          },
                           {
-                                    layout: 'noBorders',
+                                layout: {
+                                      hLineColor: function(i, node) {
+                                          return i === 1  ? 'black' : 'white';
+                                      },
+                                      vLineColor: function(i, node) {
+                                          return 'white';
+                                      },
+                                      paddingTop: function(i, node) { 
+                                        return 0 },
+                                      paddingBottom: function(i, node) { 
+                                        return i == 1 ? 3 : 0; 
+                                      }
+                                    },
                                 table: {
                                     widths:['*'],
                                   body: [[{ text: 'Work Experience', style: 'headerStyle',}],
@@ -216,6 +227,24 @@ new Vue({
                 },
                   
                 },
+                // VERTICAL LINE START
+                {
+                  layout: {
+                      hLineWidth: function(i, node) {
+                          return (i === 0 || i === node.table.body.length) ? 0 : 1;
+                      },
+                      vLineWidth: function(i, node) {
+                          return 0;
+                      },
+                      paddingTop: function(i, node) { return -10; },
+                      paddingBottom: function(i, node) { return -3; }
+                  },
+                  table: {
+                      widths: ['*'],
+                      body: [[" "], [" "]]
+                  },
+                },
+                // VERTICAL LINE END
                 {
                     layout: 'noBorders',
                 table: {
@@ -249,6 +278,24 @@ new Vue({
                 },
                   
                 },
+                // VERTICAL LINE START
+                {
+                  layout: {
+                      hLineWidth: function(i, node) {
+                          return (i === 0 || i === node.table.body.length) ? 0 : 1;
+                      },
+                      vLineWidth: function(i, node) {
+                          return 0;
+                      },
+                      paddingTop: function(i, node) { return -10; },
+                      paddingBottom: function(i, node) { return -3; }
+                  },
+                  table: {
+                      widths: ['*'],
+                      body: [[" "], [" "]]
+                  },
+                },
+                // VERTICAL LINE END
                 {
                     layout: 'noBorders',
                 table: {
@@ -277,6 +324,24 @@ new Vue({
                 },
                   
                 },
+                // VERTICAL LINE START
+                {
+                  layout: {
+                      hLineWidth: function(i, node) {
+                          return (i === 0 || i === node.table.body.length) ? 0 : 1;
+                      },
+                      vLineWidth: function(i, node) {
+                          return 0;
+                      },
+                      paddingTop: function(i, node) { return -10; },
+                      paddingBottom: function(i, node) { return -3; }
+                  },
+                  table: {
+                      widths: ['*'],
+                      body: [[" "], [" "]]
+                  },
+                },
+                // VERTICAL LINE END
                 {
                     layout: 'noBorders',
                 table: {
@@ -299,10 +364,7 @@ new Vue({
                 fontSize: 10,
               },
               headerStyle: {
-                  borderColor: 'white',
-                  fillColor: '#1976D2',
-                  color: 'white',
-                fontSize: 12,
+                fontSize: 13,
                 bold: true
               },
               miniTitleStyle: {
