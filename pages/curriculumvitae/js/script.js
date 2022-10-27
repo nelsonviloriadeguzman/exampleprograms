@@ -18,7 +18,7 @@ new Vue({
           
           shortProfile: {
             fullName: 'Nelson V. de Guzman',
-            mobileNumber: '+63 926 659 3763',
+            mobileNumber: '+63 915 7959 026',
             emailAddress: 'nelsonviloriadeguzman@gmail.com',
             skypeName: 'live:nelsonviloriadeguzman',
             github: 'nelsonviloriadeguzman.github.io/exampleprograms/',
