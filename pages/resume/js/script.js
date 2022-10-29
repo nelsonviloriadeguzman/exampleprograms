@@ -248,20 +248,22 @@ new Vue({
                 {
                     layout: 'noBorders',
                 table: {
-                    widths:['*','*','*','*'],
-                  body: [[{ text: '\nJavascript Framework ', style:"miniTitleStyle"},
+                    widths:['*','*','*','*','*'],
+                  body: [[{ text: '\nWeb Application Core ', style:"miniTitleStyle"},
+                          { text: '\nJavaScript Framework ', style:"miniTitleStyle"},
                           { text: '\nCSS Framework ', style:"miniTitleStyle"},
                           { text: '\nServer Side / Back End', style:"miniTitleStyle"},
                           { text: '\nDatabase', style:"miniTitleStyle"},
                           ],
                           
-                          [{ text: "Vue.js\n\n", style: 'defaultTextStyle'},
+                          [{ text: "HTML\nCSS\nJavaScript\n\n", style: 'defaultTextStyle'},
+                          { text: "Vue.js\n\n", style: 'defaultTextStyle'},
                           { text: 'Vuetify\nBootstrap\nMaterialize\n\n', style: 'defaultTextStyle'},
                           { text: 'Node.js\nMagicXPA\nPHP\nc#\n\n', style: 'defaultTextStyle'},
                           { text: 'MySQL\nCouchDB\nSQL Server\nMS Access\n\n', style: 'defaultTextStyle'},
                           ],
                           
-                          [{},{},{},{}]
+                          [{},{},{},{},{}]
                           ],
                           
                 },
