@@ -54,10 +54,11 @@ data.cardList.forEach(cardCount => {
       data.results += `<a href="${cardCount.cardLink}" class="card-link">
                       <div class="card">
                         <img class="card-image" src="${cardCount.cardImage}" alt="Avatar">
+                        <div class="card-title">
+                         ${cardCount.cardTitle}
+                       </div>
                       </div>
-                      <div class="card-title">
-                      ${cardCount.cardTitle}
-                     </div>
+                    
                      </a>`; 
     })
 document.getElementsByClassName('card-container')[0].innerHTML = data.results;
