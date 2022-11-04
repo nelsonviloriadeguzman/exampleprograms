@@ -11,6 +11,22 @@ const data = {
       "cardImage": 'img/resume.png',
       "cardLink": 'pages/resume/index.html'},
 
+    { "cardTitle": 'Mini Programs',
+      "cardImage": 'img/miniprograms.png',
+      "cardLink": 'pages/miniprograms/index.html'},
+
+    { "cardTitle": 'Create Retrieve Update Delete',
+      "cardImage": 'img/crud.png',
+      "cardLink": 'pages/crud/index.html'},
+
+    { "cardTitle": 'Rock Paper Scissors',
+      "cardImage": 'img/rockpaperscissors.png',
+      "cardLink": 'pages/rockpaperscissors/index.html'},
+    
+    { "cardTitle": 'Random Questions',
+      "cardImage": 'img/randomquestions.png',
+      "cardLink": 'pages/randomquestions/index.html'},
+
     { "cardTitle": 'Simple Gantt Chart',
       "cardImage": 'img/simpleganttchart.png',
       "cardLink": 'pages/simpleganttchart/index.html'},
@@ -23,25 +39,13 @@ const data = {
       "cardImage": 'img/vuefullstackinstallation.png',
       "cardLink": 'pages/vuefullstackinstallation/index.html'},
 
-    { "cardTitle": 'Random Questions',
-      "cardImage": 'img/randomquestions.png',
-      "cardLink": 'pages/randomquestions/index.html'},
-
-    { "cardTitle": 'MuleSoft Fundamentals Quizzes',
-      "cardImage": 'img/mulesoftfundamentalsquizzes.png',
-      "cardLink": 'pages/mulesoftfundamentalsquizzes/index.html'},
-
-    { "cardTitle": 'Mini Programs',
-      "cardImage": 'img/miniprograms.png',
-      "cardLink": 'pages/miniprograms/index.html'},
-
-    { "cardTitle": 'Create Retrieve Update Delete',
-      "cardImage": 'img/crud.png',
-      "cardLink": 'pages/crud/index.html'},
-
     { "cardTitle": 'Home Page Sample 1',
       "cardImage": 'img/homepagesample1.png',
-      "cardLink": 'pages/homepagesample1/index.html'}
+      "cardLink": 'pages/homepagesample1/index.html'},
+  
+    // { "cardTitle": 'MuleSoft Fundamentals Quizzes',
+    //   "cardImage": 'img/mulesoftfundamentalsquizzes.png',
+    //   "cardLink": 'pages/mulesoftfundamentalsquizzes/index.html'},
 
   ]
 
