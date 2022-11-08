@@ -1,7 +1,4 @@
 const data = {
-    head:{
-        title : "CRUD Data"
-    },
     div:{
         headerTitle : "CRUD Data",
         headerCloseText : "Close",
@@ -19,7 +16,7 @@ data.div.headerCloseName.addEventListener('click', () => {
         window.location.href = "../../index.html";
 });
 
-document.title = data.head.title;
+document.title = data.div.headerTitle;
 document.getElementsByClassName("header-title")[0].innerText = data.div.headerTitle;
 document.getElementsByClassName("header-close")[0].innerText = data.div.headerCloseText;
 

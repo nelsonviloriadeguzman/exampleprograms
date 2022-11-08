@@ -1,7 +1,4 @@
 const data = {
-    head:{
-        title : "Random Multiple Choice Test Questions"
-    },
     div:{
         headerTitle : "Random Multiple Choice Test Questions",
         headerCloseText : "Close",
@@ -50,7 +47,7 @@ const data = {
 
 }
 
-document.title = data.head.title;
+document.title = data.div.headerTitle;
 document.getElementsByClassName("header-title")[0].innerText = data.div.headerTitle;
 document.getElementsByClassName("header-close")[0].innerText = data.div.headerCloseText;
 

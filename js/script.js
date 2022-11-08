@@ -1,9 +1,6 @@
 const data = {
-  head:{
-      title : "Example Programs"
-  },
   div:{
-      pageTitle : "<h2>Example Programs</h2>"
+      pageTitle : "Example Programs"
   },
   results : "",
   cardList : [
@@ -51,7 +48,7 @@ const data = {
 
 }
 
-document.title = data.head.title;
+document.title = data.div.pageTitle;
 document.getElementsByClassName("page-title")[0].innerHTML = data.div.pageTitle;
 
 data.cardList.forEach(cardCount => {
