@@ -1,10 +1,10 @@
 const data = {
     div:{
-        headerTitle : "Example",
+        headerTitle : "Blank Page With Side Bar",
         headerCloseText : "Close",
         headerCloseName : document.getElementsByClassName("header-close")[0]
     },
-    contentList: ['Title 1','Title 2','Title 3'],
+    contentList: ['Page 1','Page 2','Page 3'],
     currentId: '',
     
 }
@@ -24,7 +24,7 @@ document.getElementsByClassName("header-close")[0].innerText = data.div.headerCl
 
 addEventListener('load', (event) => {
     document.getElementById(data.contentList[0]).classList.add('active');
-
+    document.getElementById('right-content').innerHTML = data.contentList[0]
 });
 
 
@@ -48,6 +48,8 @@ for (let contentCount = 0; contentCount < data.contentList.length; ++contentCoun
             document.getElementById(data.contentList[contentCount]).classList.remove('active');
         }
         document.getElementById(targetElement.id).classList.add('active');
+        data.currentId = targetElement.id
+        document.getElementById('right-content').innerHTML = targetElement.id
     }
 });
 

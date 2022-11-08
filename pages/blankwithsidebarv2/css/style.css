@@ -54,6 +54,12 @@ body {
     margin: 0;
 }
 
+#left-content {
+    border-right-style: solid;
+    border-right-width: thin;
+}
+
+
 #left-content ul {
     list-style-type: none;
 }
@@ -88,10 +94,10 @@ button {
     width: 100%;
     background-color: transparent;
     color: black;
-    padding: 10px 10px;
-    margin: 8px 0;
     border: none;
-    border-radius: 4px;
+    height: 3rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     cursor: pointer;
 }
 
