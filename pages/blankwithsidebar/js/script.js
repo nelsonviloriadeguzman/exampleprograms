@@ -6,7 +6,7 @@ const data = {
     },
     currentTab: 'Page 1',
     tabTitle: ['Page 1','Page 2','Page 3'],
-    contentTitleContainer: document.getElementById("content-title"),
+    contentTitleContainer: document.getElementById("tab-title"),
     contentContainer: document.getElementById("right-content"),
     contentList: [
 
