@@ -7,7 +7,7 @@ const data = {
     currentTab: 'Page 1',
     tabTitle: ['Page 1','Page 2','Page 3'],
     contentTitleContainer: document.getElementById("content-title"),
-    contentContainer: document.getElementById("content-list"),
+    contentContainer: document.getElementById("right-content"),
     contentList: [
 
         {
@@ -46,7 +46,7 @@ document.getElementsByClassName("header-close")[0].innerText = data.div.headerCl
 *************** LEFT CONTENT ********************
 ************************************************/
 
-function loadTableContent(currentTab){
+function loadCurrentTabContent(currentTab){
     data.contentContainer.innerText = currentTab
 }  
 
@@ -76,13 +76,13 @@ document.addEventListener("click", (event) => {
 
         document.getElementById(targetElement.id).classList.add('active');
         data.currentTab = targetElement.id
-        loadTableContent(targetElement.id)
+        loadCurrentTabContent(targetElement.id)
     }
 });
 
 addEventListener('load', () => {
     loadSidebarMenu()
-    loadTableContent(data.currentTab)  
+    loadCurrentTabContent(data.currentTab)  
 });
 
 

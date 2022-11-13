@@ -4,13 +4,11 @@ const data = {
         headerCloseText : "Close",
         headerCloseName : document.getElementsByClassName("header-close")[0]
     },
-    selectedMiniProgramId : 'spellbackwards',
-    spellBackwards : 'Spell backwards',
-    palindrome : 'Palindrome',
-    fibonacci : 'Fibonacci',
-    inputLabel : 'Input',
-    outputLabel : 'Output',
-    getResult : 'Submit'
+    currentTab: 'Spell Backwards',
+    tabTitle: ['Spell Backwards','Palindrome','Fibonacci'],
+    contentTitleContainer: document.getElementById("tab-title"),
+    contentContainer: document.getElementById("right-content"),
+
 }
 
 data.div.headerCloseName.addEventListener('click', () => {
@@ -21,74 +19,95 @@ document.title = data.div.headerTitle;
 document.getElementsByClassName("header-title")[0].innerText = data.div.headerTitle;
 document.getElementsByClassName("header-close")[0].innerText = data.div.headerCloseText;
 
-document.getElementById("mini-program-title").innerText = data.spellBackwards;
-document.getElementById("spellbackwards").innerText = data.spellBackwards;
-document.getElementById("palindrome").innerText = data.palindrome;
-document.getElementById("fibonacci").innerText = data.fibonacci;
-document.getElementById("inputlabel").innerText = data.inputLabel;
-document.getElementById("outputlabel").innerText = data.outputLabel;
-document.getElementById("get-result").innerText = data.getResult;
 
 /************************************************
 *************** LEFT CONTENT ********************
 ************************************************/
 
-document.getElementById("get-result").addEventListener("click", () => {
+function loadCurrentTabContent(currentTab){
 
-    document.getElementById('input').value.trim() === null || 
-    document.getElementById('input').value.trim() === undefined || 
-    document.getElementById('input').value.trim() === '' ? alert('no blank fields') : getResult();
+    data.contentContainer.innerHTML = "";
 
-});
+    let h2 = document.createElement("h2");
+    h2.innerText = currentTab;
+    data.contentContainer.appendChild(h2);
 
+    let input = document.createElement("input");
+    input.setAttribute("type", "text");
+    input.placeholder = "Enter Input";
+    input.setAttribute("id", "input");
+    data.contentContainer.appendChild(input);
 
-if (document.addEventListener){
-    document.addEventListener("click", function(event){
-        let targetElement = event.target
-        if(targetElement.innerText == data.spellBackwards || targetElement.innerText == data.palindrome || targetElement.innerText == data.fibonacci){
-            changeProgram(targetElement.id, targetElement.innerText);
-            data.selectedMiniProgramId = targetElement.id;
-        }
-    });
-} 
+    let output = document.createElement("input");
+    output.setAttribute("type", "text");
+    output.placeholder = "Output Display Here";
+    output.setAttribute("disabled", "");
+    output.setAttribute("id", "output");
+    data.contentContainer.appendChild(output);
 
-
-function changeProgram(miniProgramId,miniProgramTitle){
+    let btn = document.createElement("button");
+    btn.setAttribute("id", currentTab);
+    btn.setAttribute("class", "customButton");
+    btn.textContent = "Submit";
+    data.contentContainer.appendChild(btn);
     
-    const ul = document.getElementById("mini-program-list");
-    const items = ul.getElementsByTagName("li");
-    for (let i = 0; i < items.length; ++i) {
-        items[i].getElementsByTagName("a")[0].classList.remove('active')
-    }
-    document.getElementById(miniProgramId).classList.add('active');
-    document.getElementById("mini-program-title").innerHTML = miniProgramTitle
-    
-    document.getElementById('input').value = ''
-    document.getElementById('output').value = ''
-  
+}  
+
+function loadSidebarMenu(){
+    data.tabTitle.forEach( each => {
+
+        let li = document.createElement("li");
+        let btn = document.createElement("button");
+        btn.innerHTML = each;
+        btn.setAttribute("id", each); // to add id
+        li.appendChild(btn);
+        data.contentTitleContainer.appendChild(li);
+
+    })
+
+    document.getElementById(data.tabTitle[0]).classList.add('active');
 }
 
-function getResult(){
-    document.getElementById('output').value = ''
+document.addEventListener("click", (event) => { 
+
+    let targetElement = event.target;
+
+    if (targetElement.parentNode.parentNode.id == "tab-title"){
+        
+        data.tabTitle.forEach( each => {
+            document.getElementById(each).classList.remove('active');
+        })
+
+        document.getElementById(targetElement.id).classList.add('active');
+        data.currentTab = targetElement.id;
+        loadCurrentTabContent(targetElement.id);
+    }
+    else if(targetElement.parentNode.id == "right-content" && targetElement.nodeName == "BUTTON"){
+        getOutput(targetElement.id);
+    }
+});
+
+function getOutput (targetElement){
+    document.getElementById('output').value = '';
     let input = document.getElementById('input').value;
-    if (data.selectedMiniProgramId==='spellbackwards')
-    {
+    if(targetElement == "Spell Backwards"){
+        
         for (let x=0; x< input.length; x++){
-            document.getElementById('output').value += input.charAt((input.length-1)-x)
+            document.getElementById("output").value += input.charAt((input.length-1)-x)
         }
     }
-    else if (data.selectedMiniProgramId==='palindrome')
+    else if (targetElement == 'Palindrome')
     {
         let output = 'Palindrome'
         for (let x=0; x< input.length; x++){
-            if (input.charAt(x) !== input.charAt((input.length-1)-x))
+            if (input.charAt(x).toLowerCase() !== input.charAt((input.length-1)-x).toLowerCase())
             {
                 output = 'Not Palindrome'
             }
         }
         document.getElementById('output').value = output
     }
-    else if (data.selectedMiniProgramId==='fibonacci')
+    else if (targetElement==='Fibonacci')
     {
         let past = 0
         let present = 1
@@ -107,5 +126,20 @@ function getResult(){
 
         document.getElementById('output').value = output
     }
-    
 }
+
+addEventListener('load', () => {
+    loadSidebarMenu()
+    loadCurrentTabContent(data.currentTab)  
+});
+
+
+
+
+
+
+
+
+
+
+

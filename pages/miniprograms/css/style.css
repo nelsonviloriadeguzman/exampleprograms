@@ -49,25 +49,22 @@ body {
     "right-content";
 }
 
-#mini-program-list {
+#tab-title {
     padding: 0;
+    margin: 0;
 }
 
-#left-content ul {
+#left-content {
+    border-right-style: solid;
+    border-right-width: thin;
+}
+
+
+#left-content ul, #right-content ul {
     list-style-type: none;
 }
 
-#left-content a{
-    color: black;
-    text-decoration: none;
-    margin: 0.05rem;
-    line-height: 2rem;
-    padding: 0.3rem;
-    display: block;
-    border-radius: 3px;
-}
-
-#left-content a:hover{
+#left-content button:hover{
     background-color: #3fabaf;
     color: white;
 }
@@ -78,12 +75,23 @@ body {
     color: white !important;
 }
 
+button {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    height: 3rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -93,15 +101,16 @@ input[type=text]:focus {
     border-color: #3fabaf;
 }
 
-button {
+.customButton {
     width: 100%;
     background-color: #3fabaf;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    font-weight: bold;
     border: none;
-    border-radius: 4px;
+    height: 3rem;
+    border-radius: 5px;
     cursor: pointer;
+    text-align: center;
 }
 
 @media only screen and (max-width: 600px){
