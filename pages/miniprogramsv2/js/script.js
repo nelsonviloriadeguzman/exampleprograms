@@ -4,8 +4,8 @@ const data = {
         headerCloseText : "Close",
         headerCloseName : document.getElementsByClassName("header-close")[0]
     },
-    currentTab: 'Page 1',
-    tabTitle: ['Page 1','Page 2','Page 3'],
+    currentTab: 'Spell Backwards',
+    contentTitle: ['Spell Backwards','Palindrome','Fibonacci'],
     contentTitleContainer: document.getElementById("content-title"),
     contentContainer: document.getElementById("content-list"),
     contentList: [
@@ -51,7 +51,7 @@ function loadTableContent(currentTab){
 }  
 
 function loadSidebarMenu(){
-    data.tabTitle.forEach( each => {
+    data.contentTitle.forEach( each => {
 
         let li = document.createElement("li");
         let btn = document.createElement("button");
@@ -62,15 +62,15 @@ function loadSidebarMenu(){
 
     })
 
-    document.getElementById(data.tabTitle[0]).classList.add('active');
+    document.getElementById(data.contentTitle[0]).classList.add('active');
 }
 
 document.addEventListener("click", (event) => { 
     let targetElement = event.target
     
-    if (data.tabTitle.includes(targetElement.id)){
+    if (data.contentTitle.includes(targetElement.id)){
 
-        data.tabTitle.forEach( each => {
+        data.contentTitle.forEach( each => {
             document.getElementById(each).classList.remove('active');
         })
 
