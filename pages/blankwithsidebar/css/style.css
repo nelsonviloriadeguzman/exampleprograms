@@ -49,11 +49,51 @@ body {
     "right-content";
 }
 
+#content-title {
+    padding: 0;
+    margin: 0;
+}
+
+#left-content {
+    border-right-style: solid;
+    border-right-width: thin;
+}
+
+
+#left-content ul, #right-content ul {
+    list-style-type: none;
+}
+
+#left-content button:hover{
+    background-color: #0060A5;
+    color: white;
+}
+
+.active {
+    background-color: #0060A5;
+    font-weight: bold;
+    color: white !important;
+}
+
+button {
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    border: none;
+    height: 3rem;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 600px){
     #whole-content{
         grid-template-columns: 1fr;
         grid-template-areas: 
         "left-content"
         "right-content";
+    }
+    #left-content ul {
+        text-align: center;
     }
 }
