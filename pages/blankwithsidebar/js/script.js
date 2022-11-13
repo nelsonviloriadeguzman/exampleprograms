@@ -1,6 +1,6 @@
 const data = {
     div:{
-        headerTitle : "Proof Of Payment",
+        headerTitle : "Sidebar Template",
         headerCloseText : "Close",
         headerCloseName : document.getElementsByClassName("header-close")[0]
     },
