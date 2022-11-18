@@ -16,7 +16,6 @@ body {
 
 .page-title {
     text-align: center;
-    color: dimgray;
 }
 
 .card-container {
@@ -28,13 +27,11 @@ body {
 
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
     border-radius: 5px;
  }
 
 .card:hover {
     border: 3px solid cornflowerblue;
-    transform: translateY(-15px);
 }
 
 .card-link {
@@ -42,6 +39,7 @@ body {
 }
 
 .card-image {
+    border-radius: 5px;
     height: 200px;
     width: 100%;
 }
@@ -49,6 +47,6 @@ body {
 .card-title {
     padding: 10px;
     text-align: center;
-    color: dimgray;
+    color: black;
 }
 
