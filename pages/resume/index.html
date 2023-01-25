@@ -22,7 +22,7 @@
     <v-app>
       <v-main>
           <v-app-bar color="primary" dark>
-            <v-toolbar-title><h2>Resume - (Vuejs + Vuetifyjs)</h2></v-toolbar-title>
+            <v-toolbar-title><h3>Resume - (Vuejs + Vuetifyjs)</h3></v-toolbar-title>
             <v-spacer></v-spacer>
             <v-btn @click="downloadOrPreviewPDF(2)" color="primary" elevation="0">Preview</v-btn>
             <v-btn @click="downloadOrPreviewPDF(1)" color="primary" elevation="0">Download</v-btn>
@@ -33,36 +33,50 @@
           <template>
 
             <v-row>
-              <v-col md="6" >
+            <v-col md="4">
+              <br>
+              <span class="font-weight-black">{{shortProfile.fullName}}</span>
+              <br>
+              {{shortProfile.mobileNumber}}
+              <br>
+              {{shortProfile.emailAddress}}
+              <br>
+              {{shortProfile.github}}
+              <br>
+            </v-col>
+            </v-row>
+
+      
+            <v-row :style="rowHeaderStyle">
+              <h3 :style="h2Style">Experience</h3>
+            </v-row>
+
+            <v-row>
+              <v-col md="4">
                 <br>
-                <v-row>
-                  <v-col md="9" >
-                    <h2><v-icon>mdi-account</v-icon> {{shortProfile.fullName}}</h2>
-                    <h2><v-icon>mdi-cellphone</v-icon> {{shortProfile.mobileNumber}}</h2>
-                    <h2><v-icon>mdi-email</v-icon> {{shortProfile.emailAddress}}</h2>
-                    <h2><v-icon>mdi-skype</v-icon> {{shortProfile.skypeName}}</h2>
-                    <h2><v-icon>mdi-git</v-icon> {{shortProfile.github}}</h2>
-                  </v-col>
-                </v-row>
+                <span class="font-weight-black">{{workExperience.jobPosition}}</span>
                 <br>
-              </v-col>
-              <v-col md="6" >
+                {{workExperience.companyName}}
                 <br>
-                <v-row :style="rowHeaderStyle" >
-                  &nbsp;<h2 :style="h2Style">Work Experience</h2>
-                </v-row>
+                {{workExperience.companyAddress}}
                 <br>
-                <h3><v-icon>mdi-account</v-icon>Office Staff / Programmer</h3>
-                <h4><v-icon>mdi-home</v-icon> H.R.D. Singapore Pte., Ltd.</h4>
-                <h4><v-icon>mdi-map-marker</v-icon> Blk 3, Cavite Eco Zone II Gen. Trias, Cavite</h4>
-                <h4><v-icon>mdi-phone</v-icon> (046) 476-0545 / (046) 476-0465 / (02) 857-8210</h4>
-                <h4><v-icon>mdi-calendar</v-icon> June 2018 - September 2020</h4>
+                {{workExperience.companyContact}}
+                <br>
+                {{workExperience.employmentDuration}}
                 <br>
               </v-col>
             </v-row>
 
+            <v-row>
+              <v-col md="4">
+                <li v-for="item in workExperience.workResponsibilities">
+                  {{ item }}
+                </li>
+              </v-col>
+            </v-row>
+
             <v-row :style="rowHeaderStyle">
-              <h2 :style="h2Style">Information Technology Skills</h2>
+              <h3 :style="h2Style">Skills</h3>
             </v-row>
 
             <v-row>
@@ -111,63 +125,38 @@
             </v-row>
 
             <v-row :style="rowHeaderStyle">
-              <h2 :style="h2Style">Duties and Responsibilities</h2>
+              <h3 :style="h2Style">Education</h3>
             </v-row>
 
             <v-row>
               <v-col md="6">
-                <br>
-                <h3>Daily</h3>
-                Analyze system flow and the process of all handled system<br>
-                Modify existing system for improvement<br>
-                Fixing system troubles<br>
-                Tracing of missing data or if there's data discrepancy<br>
-                Monitor server activities and performace<br>
-                Act as support for system user for their system inqueries<br>
-                Data modification for correction as request by user<br>
-                Performs data extraction as requested by user<br>
-                <br>
+              <br>
+              <span class="font-weight-black">{{education.college.collegeName}}</span>
+              <br>
+              {{education.college.collegeAddress}}
+              <br>
+              {{education.college.collegeContact}}
+              <br>
+              {{education.college.collegeCourse}}
+              <br>
+              {{education.college.collegeDuration}}
+              <br>
               </v-col>
               <v-col md="6">
                 <br>
-                <h3>Periodic/Occasional</h3>
-                Update of master tables if needed as users request for additional values<br>
-                Support and attends to co-members queries in technial aspects<br>
-                Suggest improvement for lessen manual checking<br>
-                Develop the approved requested system<br>
-                Administer the newly developed system from trial deployment up to actual impementation<br>
-                Attend meeting with requester as part of system development and system modification if needed.<br>
-                Trainer of newly hired staffs<br>
+                <span class="font-weight-black">{{education.highschool.highschoolName}}</span>
+                <br>
+                {{education.highschool.highschoolAddress}}
+                <br>
+                {{education.highschool.level}}
+                <br>
+                {{education.highschool.highschoolDuration}}
                 <br>
               </v-col>
             </v-row>
 
             <v-row :style="rowHeaderStyle">
-              <h2 :style="h2Style">Education</h2>
-            </v-row>
-
-            <v-row>
-              <v-col md="6">
-                <br>
-                <h3><v-icon>mdi-school</v-icon> National College of Science and Technology</h3>
-                <h4><v-icon>mdi-map-marker</v-icon> Amafel Building Aguinaldo Highway, Dasmariñas City, Cavite</h4>
-                <h4><v-icon>mdi-phone</v-icon> (046) 416-NCST (6278)</h4>
-                <h4><v-icon>mdi-monitor-dashboard</v-icon> B.S in Information Technology</h4>
-                <h4><v-icon>mdi-calendar</v-icon> 2013 - 2017</h4>
-                <br>
-              </v-col>
-              <v-col md="6">
-                <br>
-                <h3><v-icon>mdi-school</v-icon> Manalo Academy School</h3>
-                <h4><v-icon>mdi-map-marker</v-icon> Gen. Trias, Cavite</h4>
-                <h4><v-icon>mdi-book</v-icon> High School</h4>
-                <h4><v-icon>mdi-calendar</v-icon> 2003 - 2007</h4>
-                <br>
-              </v-col>
-            </v-row>
-
-            <v-row :style="rowHeaderStyle">
-              <h2 :style="h2Style">Projects</h2>
+              <h3 :style="h2Style">Projects</h3>
             </v-row>
             <br>
             <br>
