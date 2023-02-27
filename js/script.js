@@ -39,6 +39,10 @@ const data = {
     { "cardTitle": 'Home Page Sample 1',
       "cardImage": 'img/homepagesample1.png',
       "cardLink": 'pages/homepagesample1/index.html'},
+
+    { "cardTitle": 'Random Interview Questions',
+      "cardImage": 'img/randominterviewquestions.png',
+      "cardLink": 'pages/randominterviewquestions/index.html'},
   
     // { "cardTitle": 'MuleSoft Fundamentals Quizzes',
     //   "cardImage": 'img/mulesoftfundamentalsquizzes.png',

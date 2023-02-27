@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interview Questions</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" defer></script>
+  
+  <script src="js/script.js" defer></script>
+
+ 
+</head>
+<body>
+  <div id="app">
+    <v-app>
+        <v-app-bar color="blue" dark>
+          <v-toolbar-title class="text-sm-body-2 text-md-body-1 text-lg-h6">Interview Questions</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <v-btn @click="close" color="blue" elevation="0">Close</v-btn>
+        </v-app-bar>
+
+        <v-container fill-height fluid>
+          <v-row align="center" justify="center">
+              <v-col>
+                <v-card
+                  class="mx-auto full-height ma-10 pa-10"
+                  max-width="50%"
+                >
+                  <v-card-text>
+                    <v-row>
+                      <v-col class="text-left font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary"></v-col>
+                      <v-col class="text-center font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary">Timer: {{ countDown }} </v-col>
+                      <v-col class="text-right font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary"></v-col>
+                    </v-row>
+
+                      <p class="text-center font-weight-black text-sm-body-2 text-md-body-1 text-lg-h6 text--primary"  style="margin-top: 1rem;">
+                        {{ questions[questionCount].question}}
+                      </p>
+                  
+                    <div class="text--primary" >
+                        <div v-for="item in questions[questionCount].answers">
+                          {{item}}
+                        </div>
+                    </div>
+
+                  </v-card-text>
+                  <v-card-actions>
+                    <v-btn
+                      block
+                      color="blue"
+                      dark
+                      @click="nextQuestion()"
+                    >
+                      Next
+                    </v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+          </v-row>
+        </v-container>
+    </v-app>
+  </div>
+
+</body>
+</html>
