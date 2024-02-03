@@ -16,11 +16,14 @@ data.div.headerCloseName.addEventListener('click', () => {
 
 
 let playerImage = 1
+
 let score = 0;
 let best = 0;
 let scissors = "url('img/scissors.png')"
 let paper = "url('img/paper.png')"
 let rock = "url('img/rock.png')"
+
+document.getElementById('player').style.backgroundImage = paper;
 
 function previous(){
     removeStuffs();

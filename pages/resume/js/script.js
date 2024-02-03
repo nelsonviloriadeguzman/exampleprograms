@@ -18,8 +18,7 @@ new Vue({
           workExperience:{
             jobPosition: `Office Staff / Programmer`,
             companyName: `H.R.D. Singapore Pte., Ltd.`,
-            companyAddress: `Blk 3, Cavite Eco Zone II Gen. Trias, Cavite`,
-            companyContact: `(046) 476-0545 / (046) 476-0465 / (02) 857-8210`,
+            companyAddress: `Gen. Trias City, Cavite`,
             employmentDuration: `June 2018 - September 2020`,
             workResponsibilities: [
               `Analyze system flow and the process of all handled system`,
@@ -37,18 +36,11 @@ new Vue({
           education:{
             college: {
               collegeName: `National College of Science and Technology`,
-              collegeAddress: `Amafel Building Aguinaldo Highway, Dasmariñas City, Cavite`,
-              collegeContact: `(046) 416-NCST (6278)`,
+              collegeAddress: `Dasmariñas City, Cavite`,
               collegeCourse: `Bachelor of Science in Information Technology`,
               collegeDuration: `2013 - 2017`
 
-            },
-            highschool: {
-              highschoolName: `Manalo Academy School`,
-              highschoolAddress: ` Gen. Trias, Cavite`,
-              level: `High School`,
-              highschoolDuration: `2003 - 2007`
-            },
+            }
           },
           
           shortProfile: {
@@ -211,10 +203,11 @@ new Vue({
                   body: [
                           [{ text: ' '}],
                           [{ text: this.shortProfile.fullName ,style: 'miniTitleStyle'}],
-                          [{ text: this.shortProfile.mobileNumber ,style: 'defaultTextStyle'}],
-                          [{ text: this.shortProfile.emailAddress ,style: 'defaultTextStyle'}],
-                          [{ text: this.shortProfile.github ,style: 'defaultTextStyle'}],
-                          [{ text: ' '}]
+                          [{ text: `${ this.shortProfile.mobileNumber}
+                                    ${ this.shortProfile.emailAddress}  
+                                    ${ this.shortProfile.github}
+                                    `, style: 'defaultTextStyle'}
+                          ],
                         ]
                     },
                   
@@ -253,12 +246,13 @@ new Vue({
               table: {
                 body: [
                         [{ text: ' '}],
-                        [{ text: this.workExperience.jobPosition ,style: 'miniTitleStyle'}],
-                        [{ text: this.workExperience.companyName ,style: 'defaultTextStyle'}],
-                        [{ text: this.workExperience.companyAddress ,style: 'defaultTextStyle'}],
-                        [{ text: this.workExperience.companyContact ,style: 'defaultTextStyle'}],
-                        [{ text: this.workExperience.employmentDuration ,style: 'defaultTextStyle'}],
-                        [{ text: ' '}]
+
+                          [{ text: this.workExperience.jobPosition ,style: 'miniTitleStyle'}],
+                          [{ text: `${ this.workExperience.companyName}
+                                    ${ this.workExperience.companyAddress}  
+                                    ${ this.workExperience.employmentDuration}
+                                    `, style: 'defaultTextStyle'}
+                          ],
                       ]
                   },
                 
@@ -317,7 +311,7 @@ new Vue({
                         [
                         { text: "Vue.js\n\n", style: 'skillStyle'},
                         { text: 'Vuetify\nBootstrap\nMaterialize\n\n', style: 'skillStyle'},
-                        { text: 'Node.js\nMagicXPA\nPHP\nc#\n\n', style: 'skillStyle'},
+                        { text: 'Node.js\nMagicXPA\nPHP\nC#\n\n', style: 'skillStyle'},
                         { text: 'MySQL\nCouchDB\nSQL Server\nMS Access\n\n', style: 'skillStyle'},
                         ],
                         
@@ -362,24 +356,14 @@ new Vue({
                 {
                     layout: 'noBorders',
                 table: {
-                    widths:['*','*'],
-                  body: [[
-                          { text: this.education.college.collegeName, style:"miniTitleStyle"},
-                          { text: this.education.highschool.highschoolName, style:"miniTitleStyle"},
-                          ],
-                          [{ text: `${ this.education.college.collegeAddress}  
-                                    ${ this.education.college.collegeContact} 
-                                    ${ this.education.college.collegeCourse}  
+                    widths:['*'],
+                  body: [[{ text: this.education.college.collegeCourse, style:"miniTitleStyle"}],
+                          [{ text: `${ this.education.college.collegeName}
+                                    ${ this.education.college.collegeAddress}  
                                     ${ this.education.college.collegeDuration}
-                                    `, style: 'defaultTextStyle'},
-
-                          { text: `${ this.education.highschool.highschoolAddress}  
-                                    ${ this.education.highschool.level} 
-                                    ${ this.education.highschool.highschoolDuration}
-                                    `, style: 'defaultTextStyle'},
-                          ],
-                          [{},{}]
+                                    `, style: 'defaultTextStyle'}
                           ]
+                        ]
                 },
                   
                 },
@@ -396,10 +380,6 @@ new Vue({
               miniTitleStyle: {
                 bold: true,
                 fontSize: 11,
-              },
-              infoStyle: {
-                  bold: true,
-                  fontSize: 11,
               },
               skillStyle:{
                 fontSize: 11,
