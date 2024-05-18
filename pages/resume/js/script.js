@@ -18,7 +18,7 @@ new Vue({
           workExperience:{
             jobPosition: `Office Staff / Programmer`,
             companyName: `H.R.D. Singapore Pte., Ltd.`,
-            companyAddress: `Gen. Trias City, Cavite`,
+            companyAddress: `General Trias City, Cavite`,
             employmentDuration: `June 2018 - September 2020`,
             workResponsibilities: [
               `Analyze system flow and the process of all handled system`,
@@ -45,6 +45,7 @@ new Vue({
           
           shortProfile: {
             fullName: 'Nelson V. de Guzman',
+            address: 'Manila City, Metro Manila',
             mobileNumber: '+63 926 659 3763',
             emailAddress: 'nelsonviloriadeguzman@gmail.com',
             github: 'nelsonviloriadeguzman.github.io/exampleprograms/',
@@ -202,8 +203,9 @@ new Vue({
                 table: {
                   body: [
                           [{ text: ' '}],
-                          [{ text: this.shortProfile.fullName ,style: 'miniTitleStyle'}],
-                          [{ text: `${ this.shortProfile.mobileNumber}
+                          [{ text: this.shortProfile.fullName ,style: 'mainTitleStyle'}],
+                          [{ text: `${ this.shortProfile.address}
+                                    ${ this.shortProfile.mobileNumber}
                                     ${ this.shortProfile.emailAddress}  
                                     ${ this.shortProfile.github}
                                     `, style: 'defaultTextStyle'}
@@ -376,6 +378,10 @@ new Vue({
               headerStyle: {
                 fontSize: 11,
                 bold: true
+              },
+              mainTitleStyle: {
+                bold: true,
+                fontSize: 18,
               },
               miniTitleStyle: {
                 bold: true,

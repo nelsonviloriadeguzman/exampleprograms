@@ -75,7 +75,7 @@ new Vue({
               ]
             },
             {
-              question: `WHAT WHERE YOU DOING THIS PAST 2 YEARS?`,
+              question: `WHAT WHERE YOU DOING THIS PAST 3 YEARS?`,
             
               answers: [
                 `I was spending my time with my family`,
@@ -105,6 +105,22 @@ new Vue({
                 `software developer`, 
                 `project manager`,
                 `and instructor for newly employees`,
+                
+              ]
+            },
+            {
+              question: `WHY DO YOU WANT TO JOIN OUR COMPANY?`,
+            
+              answers: [
+                `2`,
+                
+              ]
+            },
+            {
+              question: `WHERE DO YOU SEE YOURSELF IN 5 YEARS?`,
+            
+              answers: [
+                `111`,
                 
               ]
             },
