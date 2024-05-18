@@ -381,7 +381,7 @@ new Vue({
               },
               mainTitleStyle: {
                 bold: true,
-                fontSize: 17,
+                fontSize: 16,
               },
               miniTitleStyle: {
                 bold: true,
