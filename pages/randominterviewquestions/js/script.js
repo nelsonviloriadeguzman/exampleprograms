@@ -21,7 +21,7 @@ new Vue({
               question: `TELL ME ABOUT YOURSELF?`,
             
               answers: [
-                `Thank you for giving me this opportunity here is a bit about myself.`,
+               `Thank you for giving me this opportunity here is a bit about myself.`,
                 `I am Nelson de Guzman I have completed my Bachelor of Science in Information Technology`,
                 `I was a programmer working from monday to saturday in a japanese company for 2 years`,
                 `I have been mostly involved in Research and Development Department Systems`,
@@ -30,6 +30,8 @@ new Vue({
                 `And If there is no problem the task is complete`,
                 `Sometimes, if I can't do the task, I asked my team members for help, likewise I also try to help them as much as I can`,
                 `If there is no work to do, we study the work of other team members, so we can do their work in case they are absent.`
+                `Because of uncertainties I resigned in year 2020 around september and I decided to spend my time with my family up until now`
+                `I did some reviews of my skills before applying for a job.`
                 ]
             },
             {
