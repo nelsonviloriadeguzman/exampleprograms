@@ -1,5 +1,4 @@
 const topNav = {
-
   populateTopNav: function() {
     const topNavData = [
       { text: "Home", href: "#", className: "active" },
@@ -81,10 +80,10 @@ const topNav = {
   },
   showTopNav: function() {
     let x = document.getElementById("topnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
+    if (x.classList.contains("responsive")) {
+        x.classList.remove("responsive");
     } else {
-      x.className = "topnav";
+        x.classList.add("responsive");
     }
   },
 };
@@ -169,6 +168,7 @@ const sidebar = {
     return div;
   },
 }
+
 const navigation = {
 
   toggleTopNavDropDown: function() {
@@ -226,14 +226,20 @@ const navigation = {
     let dropdownBtns = document.querySelectorAll(".sideBarDropDownBtn");
     dropdownBtns.forEach(function(btn) {
       btn.addEventListener("click", function() {
+        let dropdownContent = this.nextElementSibling;
+        let isDisplayed = dropdownContent.style.display === "block";
+        
         let dropdownContents = document.querySelectorAll('.sideBarDropDown-content');
         dropdownContents.forEach(function(content) {
           content.style.display = "none";
         });
-        let dropdownContent = this.nextElementSibling;
-        dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        
+        if (!isDisplayed) {
+          dropdownContent.style.display = "block";
+        }
       });
     });
+
     window.addEventListener("click", function(event) {
       if (event.target.closest('.sidebar')) {
         let sidebarDropdown = event.target.closest('.sideBarDropDown');
