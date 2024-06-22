@@ -29,8 +29,8 @@ new Vue({
                 `Once the task is finished, we notify the client for feedback`,
                 `And If there is no problem the task is complete`,
                 `Sometimes, if I can't do the task, I asked my team members for help, likewise I also try to help them as much as I can`,
-                `If there is no work to do, we study the work of other team members, so we can do their work in case they are absent.`
-                `Because of uncertainties I resigned in year 2020 around september and I decided to spend my time with my family up until now`
+                `If there is no work to do, we study the work of other team members, so we can do their work in case they are absent.`,
+                `Because of uncertainties I resigned in year 2020 around september and I decided to spend my time with my family up until now`,
                 `I did some reviews of my skills before applying for a job.`
                 ]
             },
