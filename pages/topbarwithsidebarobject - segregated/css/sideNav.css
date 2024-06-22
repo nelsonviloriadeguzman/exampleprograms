@@ -1,11 +1,4 @@
 
-.container {
-    display: flex;
-    height: 100vh;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
   .sideNav {
     padding-bottom: 5rem;
     width: 250px;
@@ -24,7 +17,7 @@
   .sideNav a.activeSideNavItem {
     color:#1E88E5;
     font-weight: bold;
-    border-right: 0.2rem solid #1E88E5; 
+    border: 0.2rem solid #1E88E5; 
   }
   
   .sideNav .sideNavDropDown-content {
@@ -33,7 +26,6 @@
   }
   
   .sideNav a:hover, .sideNavDropDownBtn:hover {
-    border: 0.2rem solid #1E88E5;
     font-weight: bold;
   }
   
