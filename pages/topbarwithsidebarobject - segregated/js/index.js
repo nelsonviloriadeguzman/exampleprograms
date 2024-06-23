@@ -1,5 +1,5 @@
-import topNav from './topNav.js';
-import sideNav from './sideNav.js';
+import topNav from './top-nav.js';
+import sideNav from './side-nav.js';
 
 topNav.populateTopNav();
 topNav.executeTopNavEvents();
