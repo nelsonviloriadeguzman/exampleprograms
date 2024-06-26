@@ -64,86 +64,10 @@ new Vue({
               CSharp: false,
               NodeJS: true,
               PHP: false,
-              MagicXPA: false,
               MicrosoftAccess: false,
               SQLServer: false,
               mySQL: true,
-              couchDB:  false
               
-            },
-            {
-              projectName: 'Item Introduction Report (Remake)',
-              projectDate: '2019',
-              projectRole: 'Programmer',
-              HTMLCSSJavaScript: true,
-              VueJS: true,
-              Vuetify: true,
-              Bootstrap: false,
-              Materialize: false,
-              CSharp: false,
-              NodeJS: true,
-              PHP: false,
-              MagicXPA: false,
-              MicrosoftAccess: false,
-              SQLServer: false,
-              mySQL: false,
-              couchDB:  true
-              
-            },
-            {
-              projectName: 'Item Introduction Report',
-              projectDate: '2018',
-              projectRole: 'Support',
-              HTMLCSSJavaScript: false,
-              VueJS: false,
-              Vuetify: false,
-              Bootstrap: false,
-              Materialize: false,
-              CSharp: false,
-              NodeJS: false,
-              PHP: false,
-              MagicXPA: true,
-              MicrosoftAccess: false,
-              SQLServer: true,
-              mySQL: false,
-              couchDB:  false
-            },
-            {
-              projectName: 'Truck Monitoring System',
-              projectDate: '2018',
-              projectRole: 'Programmer',
-              HTMLCSSJavaScript: false,
-              VueJS: false,
-              Vuetify: false,
-              Bootstrap: false,
-              Materialize: false,
-              CSharp: false,
-              NodeJS: false,
-              PHP: false,
-              MagicXPA: true,
-              MicrosoftAccess: false,
-              SQLServer: true,
-              mySQL: false,
-              couchDB:  false
-              
-            },
-            {
-              projectName: 'NCST Alumni Portal',
-              projectDate: '2017',
-              projectRole: 'Programmer',
-              HTMLCSSJavaScript: true,
-              VueJS: false,
-              Vuetify: false,
-              Bootstrap: false,
-              Materialize: true,
-              CSharp: false,
-              NodeJS: false,
-              PHP: true,
-              MagicXPA: false,
-              MicrosoftAccess: false,
-              SQLServer: false,
-              mySQL: true,
-              couchDB:  false
             },
             {
               projectName: 'Online Services Transaction Management System',
@@ -157,11 +81,9 @@ new Vue({
               CSharp: false,
               NodeJS: false,
               PHP: true,
-              MagicXPA: false,
               MicrosoftAccess: false,
               SQLServer: false,
               mySQL: true,
-              couchDB:  false
               
             },
             {
@@ -175,12 +97,10 @@ new Vue({
               Materialize: false,
               CSharp: true,
               PHP: false,
-              MagicXPA: false,
               NodeJS: false,
               MicrosoftAccess: true,
               SQLServer: false,
               mySQL: false,
-              couchDB:  false
               
             },
           ],
@@ -312,9 +232,9 @@ new Vue({
                         
                         [
                         { text: "Vue.js\n\n", style: 'skillStyle'},
-                        { text: 'Vuetify\nBootstrap\nMaterialize\n\n', style: 'skillStyle'},
-                        { text: 'Node.js\nMagicXPA\nPHP\nC#\n\n', style: 'skillStyle'},
-                        { text: 'MySQL\nCouchDB\nSQL Server\nMS Access\n\n', style: 'skillStyle'},
+                        { text: 'Vuetify\nBootstrap\n\n', style: 'skillStyle'},
+                        { text: 'Node.js\nPHP\nC#\nJava\n\n', style: 'skillStyle'},
+                        { text: 'MySQL\nSQL Server\nMicrosoft Access\n\n', style: 'skillStyle'},
                         ],
                         
                         [{},{},{},{}]
@@ -381,7 +301,7 @@ new Vue({
               },
               mainTitleStyle: {
                 bold: true,
-                fontSize: 16,
+                fontSize: 15,
               },
               miniTitleStyle: {
                 bold: true,
