@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../css/java/java-index.css">
+<link rel="stylesheet" href="../../css/java/java-top-nav.css">
+<link rel="stylesheet" href="../../css/java/java-side-nav.css">
+<link rel="stylesheet" href="../../css/prism.css">
+<link rel="stylesheet" href="../../css/highlighted-string.css">
+<script src="../../js/prism.js" defer></script>
+<script src="../../js/highlighted-string.js" defer></script>
+</head>
+<body>
+
+  <div class="header-background">
+    <div class="header-container">
+        <div class="header-content">
+            <div class="header-title"></div>
+            <div class="header-close"></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sideNav">
+    </div>
+    <div class="sideNavContent">
+      <p><span class="javaJargons">Data Types</span> refers to the type of value a variable can store / hold.</p>
+      <p><span class="javaJargons">Primitive data types</span> includes byte, short, int, long, float, double, boolean and char.</p>
+      <p><span class="javaJargons">Non-primitive data types</span> includes String, Arrays and Classes (will discuss later).</p>
+
+
+<p class="text"> Code: </p>
+<pre class="language-js">
+  <code class="language-js">
+  public class Main {
+    public static void main(String[] args) {
+
+    // byte can store value from -128 to 127
+    byte byteVariable = 127;
+    
+    // short data type can store value from -32,768 to 32,767
+    short shortVariable = 32767;
+    
+    // int data type can store value from -2,147,483,648 to 2,147,483,648
+    int intVariable = 2147483647; 
+
+    // long data type can store value from -9,223,372,036,854,775,808 to -9,223,372,036,854,775,807
+    long longVariable = 9223372036854775806L;
+    
+    // float data type can store value from 6 to 7 decimal places.
+    float floatVariable = 3.14f;
+    
+    // double data type can store value up to 15 decimal places.
+    double doubleVariable = 3.14159;
+    
+    // boolean data type has only two possible values: true and false.
+    boolean booleanVariable = true;
+
+    // char data type can store a single character.
+    char charVariable = 'D';
+
+    System.out.println(byteVariable);       
+    System.out.println(shortVariable);     
+    System.out.println(intVariable);         
+    System.out.println(longVariable);       
+    System.out.println(floatVariable);     
+    System.out.println(doubleVariable);   
+    System.out.println(booleanVariable); 
+    System.out.println(charVariable);       
+
+    }
+  }
+  </code>
+</pre>
+
+<p class="text"> Output: </p>
+      <pre class="language-css">
+        <code class="language-css">
+    127
+    32767
+    2147483647
+    9223372036854775806L
+    3.14f
+    3.14159
+    true
+    D
+</code>
+</pre>
+    </div>
+  </div>
+<script type="module" src="../../js/java/java-index.js"></script>
+</body>
+</html>

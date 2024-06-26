@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../css/java/java-index.css">
+<link rel="stylesheet" href="../../css/java/java-top-nav.css">
+<link rel="stylesheet" href="../../css/java/java-side-nav.css">
+<link rel="stylesheet" href="../../css/prism.css">
+<link rel="stylesheet" href="../../css/highlighted-string.css">
+<script src="../../js/prism.js" defer></script>
+<script src="../../js/highlighted-string.js" defer></script>
+</head>
+<body>
+
+  <div class="header-background">
+    <div class="header-container">
+        <div class="header-content">
+            <div class="header-title"></div>
+            <div class="header-close"></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sideNav">
+    </div>
+    <div class="sideNavContent">
+      <p><span class="javaJargons">Identifier Format</span> encompasses several widely accepted best practices that promote readability, maintainability, and consistency across codebases.</p>   
+      <p><span class="javaJargons">PascalCase</span> used typically for class name, interfaces, enums and type names. Capitalize the first letter of each word without spaces or underscores.</p>
+      <p><span class="javaJargons">UPPERCASE</span> should be used for all characters in variables designated as constants or immutable. </p>
+      <p><span class="javaJargons">camelCase</span> used typically for variables, functions, and method names. Capitalize the first letter of each word except the first word, without spaces or underscores. </p>
+<p class="text"> Code: </p>
+<pre class="language-js">
+  <code class="language-js">
+    public class Main {
+
+        static class DailyGreetings {
+      
+          public static final String IMPORTANT_MESSAGE = "Safety First!";
+          
+          public static void morningGreetings() {
+      
+            String additionalMessage = "Eat your breakfast!";
+            System.out.println("Good Morning!");
+            System.out.println(additionalMessage);
+            System.out.println(IMPORTANT_MESSAGE);
+            
+          }
+        }
+        
+        public static void main(String[] args) {
+      
+          DailyGreetings.morningGreetings();
+          
+        }
+      
+    }
+  </code>
+</pre>
+<br>
+      <table>
+        <tr>
+          <th>Concept</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="concept">DailyGreetings</td>
+          <td>class name example for PascalCase.</td>
+        </tr>
+        <tr>
+          <td class="concept">IMPORTANT_MESSAGE</td>
+          <td>constant name example for UPPERCASE.</td>
+        </tr>
+        <tr>
+            <td class="concept">morningGreetings</td>
+            <td>method or function name example for camelCase.</td>
+        </tr>
+        <tr>
+            <td class="concept">additionalMessage</td>
+            <td>variable name example for camelCase.</td>
+        </tr>
+
+      </table>
+
+    </div>
+  </div>
+<script type="module" src="../../js/java/java-index.js"></script>
+</body>
+</html>
