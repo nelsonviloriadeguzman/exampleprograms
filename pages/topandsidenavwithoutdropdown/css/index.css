@@ -1,0 +1,12 @@
+body {
+  margin:0;
+  font-family:Arial;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}

@@ -75,11 +75,11 @@ const topNav = {
       return div;
     },
     showTopNav: function() {
-      let x = document.getElementById("topNav");
-      if (x.classList.contains("responsive")) {
-          x.classList.remove("responsive");
+      let topNav = document.getElementById("topNav");
+      if (topNav.classList.contains("responsive")) {
+          topNav.classList.remove("responsive");
       } else {
-          x.classList.add("responsive");
+          topNav.classList.add("responsive");
       }
     },
     setActiveTopNavItem: function(element) {

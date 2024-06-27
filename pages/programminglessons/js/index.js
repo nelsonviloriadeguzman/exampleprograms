@@ -1,6 +1,6 @@
 const data = {
     div:{
-        pageTitle : "Programming Documentation"
+        pageTitle : "Programming Lessons"
     },
     results : "",
     cardList : [

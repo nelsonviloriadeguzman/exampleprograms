@@ -1,0 +1,50 @@
+.sideNav {
+  padding-bottom: 5rem;
+  width: 250px;
+  background-color: white;
+  padding-top: 20px;
+  overflow-y: auto;
+}
+
+.sideNav a {
+  padding: 10px;
+  display: block;
+  color: black;
+  text-decoration: none;
+}
+
+.sideNav a.activeSideNavItem {
+  color:#1E88E5;
+  font-weight: bold;
+  border: 0.2rem solid #1E88E5; 
+}
+
+
+.sideNav a:hover {
+  font-weight: bold;
+}
+
+
+.sideNavContent {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 5rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sideNav {
+    width: 100%;
+    height: 10vh;
+    overflow-y: auto;
+  }
+  .sideNavContent {
+    flex: 1;
+    padding: 20px;
+    padding-bottom: 5rem;
+    overflow-y: auto;
+  }
+}

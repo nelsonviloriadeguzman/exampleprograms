@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../css/java/java-index.css">
+<link rel="stylesheet" href="../../css/java/java-top-nav.css">
+<link rel="stylesheet" href="../../css/java/java-side-nav.css">
+<link rel="stylesheet" href="../../css/prism.css">
+<link rel="stylesheet" href="../../css/highlighted-string.css">
+<script src="../../js/prism.js" defer></script>
+<script src="../../js/highlighted-string.js" defer></script>
+</head>
+<body>
+
+  <div class="header-background">
+    <div class="header-container">
+        <div class="header-content">
+            <div class="header-title"></div>
+            <div class="header-close"></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="sideNav">
+    </div>
+    <div class="sideNavContent">
+      <p><span class="javaJargons">Arithmetic Operators</span> perform addition, subtraction, multiplication, division and modulus.</p>
+  
+<p class="text"> Code: </p>
+<pre class="language-js">
+  <code class="language-js">
+  public class Main {
+    public static void main(String[] args) {
+
+      int sumResult = 1 + 1;
+      int differenceResult = 2 - 2;
+      int productResult = 3 * 3;
+      int quotientResult = 4 / 4;
+      int remainderResult = 5 % 5;
+
+      System.out.println("Sum is "+ sumResult);
+      System.out.println("Difference is "+ differenceResult);
+      System.out.println("Product is " + productResult);
+      System.out.println("Quotient is " + quotientResult);
+      System.out.println("Remainder is " + remainderResult);
+
+    }
+  }
+  </code>
+</pre>
+
+<p class="text"> Output: </p>
+<pre class="language-css">
+  <code class="language-css">
+  Sum is 2
+  Difference is 0
+  Product is 9
+  Quotient is 1
+  Remainder is 0
+  </code>
+</pre>
+      <br>
+      <table>
+        <tr>
+          <th>Concept</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td class="concept">+</td>
+          <td>Addition operator was used for 1 + 1.</td>
+        </tr>
+        <tr>
+          <td class="concept">-</td>
+          <td>Subtraction operator was used for 2 - 2.</td>
+        </tr>
+        <tr>
+          <td class="concept">*</td>
+          <td>Multiplication operator was used for 3 * 3.</td>
+        </tr>
+        <tr>
+          <td class="concept">/</td>
+          <td>Division operator was used for 4 / 4.</td>
+        </tr>
+        <tr>
+          <td class="concept">%</td>
+          <td>Modulus operator was used for 5 % 5.</td>
+        </tr>
+      </table>
+
+<br>
+<p>You can also use operators with variables.</p>
+<p class="text"> Code: </p>
+<pre class="language-js">
+  <code class="language-js">
+  public class Main {
+    public static void main(String[] args) {
+
+      int input1 = 20;
+      int input2 = 10;
+
+      int sumResult = input1 + input2;
+      int differenceResult = input1 - input2;
+      int productResult = input1 * input2;
+      int quotientResult = input1 / input2;
+      int remainderResult = input1 % input2;
+
+      System.out.println("Sum is "+ sumResult);
+      System.out.println("Difference is "+ differenceResult);
+      System.out.println("Product is " + productResult);
+      System.out.println("Quotient is " + quotientResult);
+      System.out.println("Remainder is " + remainderResult);
+
+    }
+  }
+  </code>
+</pre>
+<p class="text"> Output: </p>
+  <pre class="language-css">
+    <code class="language-css">
+  Sum is 30
+  Difference is 10
+  Product is 200
+  Quotient is 2
+  Remainder is 0
+  </code>
+</pre>
+<br>
+<table>
+  <tr>
+    <th>Concept</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td class="concept">input1</td>
+    <td>input1 is the first variable used for operators.</td>
+  </tr>
+  <tr>
+    <td class="concept">input2</td>
+    <td>input2  is the second variable used for operators.</td>
+  </tr>
+</table>
+
+<br>
+<p>You can also use operators with variables that have already been assigned.</p>
+<p class="text"> Code: </p>
+<pre class="language-js">
+  <code class="language-js">
+  public class Main {
+    public static void main(String[] args) {
+
+      int input1 = 20;
+      int input2 = 10;
+
+      int sumResult = input1 + input2;
+      int differenceResult = sumResult - input2;
+      int productResult = differenceResult * input2;
+      int quotientResult = productResult / input2;
+      int remainderResult = quotientResult % input2;
+
+      System.out.println("Sum is "+ sumResult);
+      System.out.println("Difference is "+ differenceResult);
+      System.out.println("Product is " + productResult);
+      System.out.println("Quotient is " + quotientResult);
+      System.out.println("Remainder is " + remainderResult);
+
+    }
+  }
+  </code>
+</pre>
+<p class="text"> Output: </p>
+  <pre class="language-css">
+    <code class="language-css">
+  Sum is 30
+  Difference is 20
+  Product is 200
+  Quotient is 20
+  Remainder is 0
+  </code>
+</pre>
+<br>
+<table>
+  <tr>
+    <th>Concept</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td class="concept">sumResult</td>
+    <td>sumResult was used for Difference Result.</td>
+  </tr>
+  <tr>
+    <td class="concept">differenceResult</td>
+    <td>differenceResult was used for Product Result.</td>
+  </tr>
+  <tr>
+    <td class="concept">productResult</td>
+    <td>productResult was used for Quotient Result.</td>
+  </tr>
+  <tr>
+    <td class="concept">quotientResult</td>
+    <td>quotientResult was used for remainderResult Result.</td>
+  </tr>
+</table>
+
+    </div>
+  </div>
+<script type="module" src="../../js/java/java-index.js"></script>
+</body>
+</html>
