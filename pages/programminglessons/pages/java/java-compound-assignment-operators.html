@@ -34,24 +34,65 @@
   public class Main {
     public static void main(String[] args) {
 
-      String fullName = "John Doe";
-      int age = "18";
+      double givenNumber = 10;
+
+      givenNumber += 1;                // 10 + 1
+      System.out.println(givenNumber); // prints 11.0
+  
+      givenNumber -= 2;                // 11 - 2
+      System.out.println(givenNumber); // prints 9.0
+  
+      givenNumber *= 3;                // 9 * 3
+      System.out.println(givenNumber); // prints 27.0
+  
+      givenNumber /= 4;                // 27 / 4
+      System.out.println(givenNumber); // prints 6.75
+  
+      givenNumber %= 5;                // 6.75 % 5
+      System.out.println(givenNumber); // prints 1.75
 
     }
   }
   </code>
 </pre>
-<br>
-      <table>
-        <tr>
-          <th>Concept</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td class="concept">=</td>
-          <td>Assignment (or equal) symbol is used to assign the value of "John Doe" to the fullName variable and the value of 18 to the age variable.</td>
-        </tr>
-      </table>
+
+<p class="text"> Output: </p>
+<pre class="language-css">
+  <code class="language-css">
+  11.0
+  9.0
+  27.0
+  6.75
+  1.75
+  </code>
+</pre>
+            <br>
+            <table>
+              <tr>
+                <th>Concept</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td class="concept">+=</td>
+                <td>+= was used to add givenNumber  by 1</td>
+              </tr>
+              <tr>
+                <td class="concept">-=</td>
+                <td>-= was used to subtract givenNumber by 2</td>
+              </tr>
+              <tr>
+                <td class="concept">*=</td>
+                <td>*= was used to multiply givenNumber by 3</td>
+              </tr>
+              <tr>
+                <td class="concept">/=</td>
+                <td>*= was used to divide givenNumber by 4</td>
+              </tr>
+              <tr>
+                <td class="concept">%=</td>
+                <td>%= was used to divide givenNumber by 5 and get the remainder</td>
+              </tr>
+            </table>
 
     </div>
   </div>

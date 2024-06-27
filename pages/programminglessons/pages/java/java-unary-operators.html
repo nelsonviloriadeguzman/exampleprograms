@@ -26,7 +26,7 @@
     <div class="sideNav">
     </div>
     <div class="sideNavContent">
-      <p><span class="javaJargons">Assignment Operator</span> assigns the value on its right to the operand on its left. This operator can also be used on objects to assign object references(will discuss later).</p>
+      <p><span class="javaJargons">Unary Operators</span> require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean..</p>
   
 <p class="text"> Code: </p>
 <pre class="language-js">
@@ -34,8 +34,27 @@
   public class Main {
     public static void main(String[] args) {
 
-      String fullName = "John Doe";
-      int age = "18";
+      int result = +1;
+      // result is now 1
+      System.out.println(result);
+
+      result--;
+      // result is now 0
+      System.out.println(result);
+
+      result++;
+      // result is now 1
+      System.out.println(result);
+
+      result = -result;
+      // result is now -1
+      System.out.println(result);
+
+      boolean success = false;
+      // false
+      System.out.println(success);
+      // true
+      System.out.println(!success);
 
     }
   }
@@ -48,8 +67,24 @@
           <th>Description</th>
         </tr>
         <tr>
-          <td class="concept">=</td>
-          <td>Assignment (or equal) symbol is used to assign the value of "John Doe" to the fullName variable and the value of 18 to the age variable.</td>
+          <td class="concept">+</td>
+          <td>Unary plus operator; indicates positive value (numbers are positive without this, however).</td>
+        </tr>
+        <tr>
+          <td class="concept">-</td>
+          <td>Unary minus operator; negates an expression.</td>
+        </tr>
+        <tr>
+          <td class="concept">++</td>
+          <td>Increment operator; increments a value by 1.</td>
+        </tr>
+        <tr>
+          <td class="concept">--</td>
+          <td>Decrement operator; decrements a value by 1.</td>
+        </tr>
+        <tr>
+          <td class="concept">!</td>
+          <td>Logical complement operator; inverts the value of a boolean.</td>
         </tr>
       </table>
 
