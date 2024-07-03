@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.69/pdfmake.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.66/vfs_fonts.js" defer></script>
+  
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-main>
+          <v-app-bar color="success" dark>
+            <v-toolbar-title><h3>Curriculum</h3></v-toolbar-title>
+            <v-spacer></v-spacer>
+          
+          </v-app-bar>
+
+          <template>
+            <br>
+            <br>
+            <v-row>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 1</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term1"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 2</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term2"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 3</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term3"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 4</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term4"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 5</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term5"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 6</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term6"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 7</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term7"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 8</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term8"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 9</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term9"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 10</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term10"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 11</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term11"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+              <v-col md="4">
+                <v-simple-table>
+                  <template v-slot:default>
+                    <thead>
+                      <tr>
+                        <th colspan="4" style="text-align:center">TERM 12</th>
+                      </tr>
+                      <tr>
+                        <th>Status</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Unit/s</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr
+                        v-for="(item,itemIndex) in term12"
+                        :key="itemIndex"
+                        :style="{ 'background-color': highlightRow(item),
+                                   'color': changeTextColor(item)  }"
+                      >
+                        <td>{{item.subjectStatus}}</td>
+                        <td>{{item.subjectCode}}</td>
+                        <td>{{item.subjectName}}</td>
+                        <td>{{item.subjectUnit}}</td>
+                        
+                      </tr>
+                    </tbody>
+                  </template>
+                </v-simple-table>
+              </v-col>
+
+            </v-row>
+           
+          </template>
+      </v-main>
+    </v-app>
+  </div>
+
+</body>
+</html>
