@@ -11,6 +11,7 @@ const sideNav = {
       { text: "Identifiers Format", href: "java-identifiers-format.html" },
       { text: "Concatenation", href: "java-concatenation.html" },
       { text: "Java Keywords", href: "java-keywords.html" },
+      
       {
         text: "Operators ",
         content: [
@@ -20,6 +21,9 @@ const sideNav = {
           { text: "Unary Operators", href: "java-unary-operators.html" }
         ]
       },
+      { text: "if-then Statement", href: "java-if-then-statement.html" },
+      { text: "if-then-else Statement", href: "java-if-then-else-statement.html" },
+      { text: "else if Statement", href: "java-else-if-statement.html" },
     ];
 
     const sideNavContainer = document.querySelector(".sideNav");
